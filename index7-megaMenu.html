@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+  
+        body{
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+            font-size: 100%;
+        }
+        li{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        .menu{
+            width: 100%;
+            height: 100px;
+            background-color: orangered;
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+        }
+        .menu>ul{
+            width: 80%;
+            height: 100%;
+            /* border: 1px solid black; */
+            display: flex;
+        }
+        .menu>ul>li{
+            /* border: 1px solid red; */
+            flex-grow: 1;
+        }
+        .menu>ul>li>a{
+            /* background-color: yellow; */
+            display: flex;
+            width: 100%;
+            height: 100%;
+            font-size: 35px;
+            justify-content: center;
+            align-items: center;
+            text-transform: capitalize;
+            color: whitesmoke;
+            transition: .4s;
+        }
+        .menu>ul>li>a:hover{
+            background-color: rgb(93, 93, 93);
+        }
+        /* submenu**** */
+        .menu>ul>li:hover>ul{
+            /* display: block; */
+            opacity: 1;
+            visibility: visible;
+        }
+        .menu>ul>li>ul{
+            width: 100%;
+            height: 350px;
+            background-color: rgb(55, 55, 55);
+            /* display: none; */
+            position: absolute;
+            top: 100px;left: 0;
+            opacity: 0;
+            visibility: hidden;
+            transition: 1s;
+        }
+        .menu>ul>li>ul>li{
+            /* height: 45px; */
+            border-bottom: 1px solid rgb(150, 150, 150);
+            display: flex;
+            align-items: center;
+            /* position: relative; */
+            width: 100%;
+            height: 100%;
+            /* background-color: red; */
+            padding: 50px;
+        }
+        .menu>ul>li>ul>li>ul{
+            width: 25%;
+            /* border: 1px solid red; */
+        }
+        .menu>ul>li>ul>li>ul>li{
+            height: 40px;
+        }
+        .menu>ul>li>ul>li>ul>li>a{
+            font-size: 25px;
+            color: white;
+        }
+        .menu>ul>li>ul>li>a{
+            /* background-color: red; */
+            padding:0 20px;
+            color: white;
+
+        }
+ 
+    
+ 
+
+
+    </style>
+</head>
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a href="">about</a></li>
+            <li><a href="">gallery</a>
+                <ul class="mega">
+                    <li>
+                        <ul>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                            <li><a href="">sample link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">social</a></li>
+            <li><a href="">contact</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
